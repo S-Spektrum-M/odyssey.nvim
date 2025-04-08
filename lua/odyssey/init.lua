@@ -42,7 +42,7 @@ local M = {}
 --   hint = "#7ec191", -- Hints (green)
 -- }
 
-M.colors {
+M.colors = {
   -- Core
   bg         = '#232635', -- Deep Sky Background
   fg         = '#D5CFC1', -- Sand Foreground
