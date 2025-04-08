@@ -1,45 +1,77 @@
 local M = {}
 
 -- Color palette inspired by Alto's Odyssey
-M.colors = {
-  -- Base colors
-  bg_dark = "#1a1016", -- Deep night sky
-  bg_main = "#221a23", -- Dark purple night background
-  bg_light = "#2d2533", -- Lighter purple for highlights
-  fg = "#e6dbd5", -- Light sand color for text
+-- M.colors = {
+--   -- Base colors
+--   bg_dark = "#1a1016", -- Deep night sky
+--   bg_main = "#221a23", -- Dark purple night background
+--   bg_light = "#2d2533", -- Lighter purple for highlights
+--   fg = "#e6dbd5", -- Light sand color for text
+--
+--   -- Warm desert colors
+--   sand_light = "#f2d6a2", -- Light sand
+--   sand = "#e6b470", -- Medium sand
+--   sand_dark = "#bf8e4b", -- Dark sand/orange
+--
+--   -- Evening/night colors
+--   purple_dark = "#382d5d", -- Deep night purple
+--   purple = "#6246a3", -- Rich purple
+--   purple_light = "#8a68df", -- Light accent purple
+--
+--   -- Sky colors
+--   blue_dark = "#1e485e", -- Deep blue
+--   blue = "#3a92c2", -- Medium blue
+--   blue_light = "#6bb9e3", -- Light blue
+--
+--   -- Accent colors
+--   red = "#e05f65", -- Sunset red
+--   orange = "#dd8f6e", -- Desert orange
+--   yellow = "#f2cc71", -- Bright sand/sun
+--   green = "#7ec191", -- Oasis green
+--   cyan = "#5dc2c0", -- Water reflection
+--
+--   -- UI colors
+--   gray = "#7b6d80", -- Muted purple gray
+--   comment = "#6d616e", -- Slightly lighter than gray
+--   dark_gray = "#403542", -- For subtle UI elements
+--   selection = "#4a334d", -- Selection highlight
+--   line_highlight = "#2a2130", -- Current line highlight
+--   error = "#e05f65", -- Error messages (red)
+--   warning = "#f2cc71", -- Warning messages (yellow)
+--   info = "#5dc2c0", -- Info messages (cyan)
+--   hint = "#7ec191", -- Hints (green)
+-- }
 
-  -- Warm desert colors
-  sand_light = "#f2d6a2", -- Light sand
-  sand = "#e6b470", -- Medium sand
-  sand_dark = "#bf8e4b", -- Dark sand/orange
+M.colors {
+  -- Core
+  bg         = '#232635', -- Deep Sky Background
+  fg         = '#D5CFC1', -- Sand Foreground
+  fg_dim     = '#A9A396', -- Dimmer FG for less important elements
+  selection  = '#404559', -- Visual Selection Background
+  comment    = '#6B7A8F', -- Dune Shadow
 
-  -- Evening/night colors
-  purple_dark = "#382d5d", -- Deep night purple
-  purple = "#6246a3", -- Rich purple
-  purple_light = "#8a68df", -- Light accent purple
+  -- Accents inspired by Alto's Odyssey
+  orange     = '#E89B64', -- Sunset Orange
+  yellow     = '#E6C07B', -- Golden Hour
+  pink       = '#D68EAD', -- Desert Rose
+  sand       = '#BDB39B', -- Moonlit Sand
+  brown      = '#A57C68', -- Distant Mesa (use sparingly or for identifiers)
+  teal       = '#7DAEA3', -- Oasis Teal
+  green      = '#90A582', -- Vine Green
 
-  -- Sky colors
-  blue_dark = "#1e485e", -- Deep blue
-  blue = "#3a92c2", -- Medium blue
-  blue_light = "#6bb9e3", -- Light blue
+  -- Semantic/Status
+  red        = '#D98686', -- Error Red
+  dark_red   = '#b56d6d',
+  blue       = '#82aaff', -- General purpose blue (can adjust)
+  cyan       = '#89ddff', -- General purpose cyan (can adjust)
 
-  -- Accent colors
-  red = "#e05f65", -- Sunset red
-  orange = "#dd8f6e", -- Desert orange
-  yellow = "#f2cc71", -- Bright sand/sun
-  green = "#7ec191", -- Oasis green
-  cyan = "#5dc2c0", -- Water reflection
+  -- UI Elements
+  ui_bg      = '#1e212d', -- Slightly darker/different BG for UI floats
+  border     = '#50566e',
+  statusline_bg = '#1e212d',
+  statusline_fg = colors.fg,
+  active_bg  = '#313546', -- Active statusline segment, Pmenu selected
 
-  -- UI colors
-  gray = "#7b6d80", -- Muted purple gray
-  comment = "#6d616e", -- Slightly lighter than gray
-  dark_gray = "#403542", -- For subtle UI elements
-  selection = "#4a334d", -- Selection highlight
-  line_highlight = "#2a2130", -- Current line highlight
-  error = "#e05f65", -- Error messages (red)
-  warning = "#f2cc71", -- Warning messages (yellow)
-  info = "#5dc2c0", -- Info messages (cyan)
-  hint = "#7ec191", -- Hints (green)
 }
 
 function M.setup()
