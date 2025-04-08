@@ -69,7 +69,7 @@ M.colors = {
   ui_bg      = '#1e212d', -- Slightly darker/different BG for UI floats
   border     = '#50566e',
   statusline_bg = '#1e212d',
-  statusline_fg = colors.fg,
+  statusline_fg = "#232635",
   active_bg  = '#313546', -- Active statusline segment, Pmenu selected
 
 }
