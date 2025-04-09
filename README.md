@@ -2,6 +2,8 @@
 
 A Neovim colorscheme inspired by the landscapes and colors of Alto's Odyssey.
 
+![demo](Demo.png)
+
 ## ✨ Features
 
 - Carefully selected color palette inspired by the desert landscapes and night skies of Alto's Odyssey
