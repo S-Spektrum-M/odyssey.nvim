@@ -1,39 +1,49 @@
 return {
-  -- Base Background / Foreground
-  bg_dark     = "#1e1e2e", -- Main background (charcoal)
-  bg_main     = "#252637", -- Slightly lighter (panels)
-  bg_light    = "#2e2f45", -- Floats / selection
-  fg          = "#c3c7d1", -- Soft, low-contrast text
+  -- Background & Foreground
+  bg_dark     = "#0f0f11", -- Deep obsidian black
+  bg_main     = "#151518", -- Primary background
+  bg_light    = "#1e1e22", -- Slightly lighter UI elements
+  fg          = "#e5e5e7", -- Silvery text
 
-  -- Primary Accents
-  purple_dark = "#4c3c6e", -- Borders, inactive tabs
-  purple      = "#a28ae5", -- Links, keywords
-  purple_light= "#d0c3f7", -- Hover/active highlights
+  -- Obsidian Sheens & Highlights
+  sand_light  = "#d0cdc9", -- Reflective surface
+  sand        = "#a89e94", -- Matte obsidian
+  sand_dark   = "#6e645a", -- Volcanic ash
+  brown       = "#4e4337", -- Hardened lava rock
 
-  blue_dark   = "#2d3a58", -- Panel hover
-  blue        = "#6ca7ec", -- Active UI elements
-  blue_light  = "#a3d2ff", -- Focused highlights
+  -- Lava-glow accents
+  red         = "#d06363", -- Cracked magma
+  dark_red    = "#a34747", -- Deeper volcanic red
+  orange      = "#e68a5d", -- Glow under pressure
+  yellow      = "#e3c378", -- Sulfur light
+  pink        = "#c1839f", -- Magmatic pink
 
-  -- Secondary Accents
-  red         = "#e26c7c", -- Errors, remove
-  dark_red    = "#a65261", -- Diff delete
-  orange      = "#f2a272", -- Subtle highlight
-  yellow      = "#eaca8b", -- Warnings / markdown highlights
-  green       = "#8ddaae", -- Success / diff add
-  teal        = "#6ad3c6", -- Info / tags
-  cyan        = "#9be4f4", -- Underline links / extras
-  pink        = "#c88ec8", -- Markdown highlights
+  -- Cooled Glass Tints
+  blue_dark   = "#1a2c3c", -- Reflective depth
+  blue        = "#4c8cbf", -- Crystalline edge
+  blue_light  = "#79b8e3", -- Surface shimmer
 
-  -- UI Neutrals
-  gray        = "#8a8fa4", -- Inactive text, split lines
-  dark_gray   = "#3a3b4d", -- Divider lines
-  comment     = "#6c7086", -- Comments or faded markdown
-  selection   = "#3c3f56", -- Visual select
-  line_highlight = "#2a2c3f", -- Current line
+  -- Mystic cools
+  purple_dark = "#3d3451", -- Shadowed edge
+  purple      = "#7f6aa7", -- Iridescent glint
+  purple_light= "#b0a1d4", -- Faint magical hue
+
+  -- Natural cools
+  green       = "#7ba88f", -- Moss on stone
+  teal        = "#5cb7a4", -- Ocean obsidian
+  cyan        = "#82d6e0", -- Crystal veins
+
+  -- UI / Comments
+  gray        = "#77787d", -- Cool graphite
+  dark_gray   = "#3d3e42", -- UI dividers
+  comment     = "#5c5d60", -- Dusty ash
+  selection   = "#26262b", -- Visual highlight
+  line_highlight = "#1a1a1e", -- Subtle current line
 
   -- Diagnostics
-  error       = "#e26c7c",
-  warning     = "#eaca8b",
-  info        = "#9be4f4",
-  hint        = "#8ddaae",
+  error       = "#d06363",
+  warning     = "#e3c378",
+  info        = "#82d6e0",
+  hint        = "#7ba88f",
 }
+
