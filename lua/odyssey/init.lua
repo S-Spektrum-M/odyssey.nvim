@@ -2,7 +2,7 @@ local M = {}
 
 -- Color palette inspired by Alto's Odyssey
 
-M.colors = require('odyssey.obsidian')
+M.colors = require('odyssey.odyssey')
 
 function M.setup()
   -- Clear previous highlighting
