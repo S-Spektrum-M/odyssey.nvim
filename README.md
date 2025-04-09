@@ -26,28 +26,13 @@ The colorscheme uses a carefully crafted palette:
 
 ```lua
 {
-  'yourusername/odyssey.nvim',
+  'S-Spektrum-M/odyssey.nvim',
   lazy = false,
   priority = 1000,
   config = function()
     vim.cmd('colorscheme odyssey')
   end
 }
-```
-
-
-## 🔧 Usage
-
-After installation, set the colorscheme:
-
-```vim
-" In your init.vim
-colorscheme odyssey
-```
-
-```lua
--- In your init.lua
-vim.cmd('colorscheme odyssey')
 ```
 
 ## 🔌 Plugin Support
