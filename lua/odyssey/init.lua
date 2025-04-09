@@ -5,11 +5,6 @@ local M = {}
 M.colors = require('odyssey.odyssey')
 
 function M.setup(mode)
-    if mode == "obsidian" then
-        M.colors = require('odyssey.obsidian')
-    else
-        M.colors = require('odyssey.odyssey')
-    end
   -- Clear previous highlighting
   vim.cmd("highlight clear")
 
