@@ -1,78 +1,8 @@
 local M = {}
 
 -- Color palette inspired by Alto's Odyssey
-M.colors = {
-  -- Base colors
-  bg_dark = "#1a1016", -- Deep night sky
-  bg_main = "#221a23", -- Dark purple night background
-  bg_light = "#2d2533", -- Lighter purple for highlights
-  fg = "#e6dbd5", -- Light sand color for text
 
-  -- Warm desert colors
-  sand_light = "#f2d6a2", -- Light sand
-  sand = "#e6b470", -- Medium sand
-  sand_dark = "#bf8e4b", -- Dark sand/orange
-
-  -- Evening/night colors
-  purple_dark = "#382d5d", -- Deep night purple
-  purple = "#6246a3", -- Rich purple
-  purple_light = "#8a68df", -- Light accent purple
-
-  -- Sky colors
-  blue_dark = "#1e485e", -- Deep blue
-  blue = "#3a92c2", -- Medium blue
-  blue_light = "#6bb9e3", -- Light blue
-
-  -- Accent colors
-  red = "#e05f65", -- Sunset red
-  orange = "#dd8f6e", -- Desert orange
-  yellow = "#f2cc71", -- Bright sand/sun
-  green = "#7ec191", -- Oasis green
-  cyan = "#5dc2c0", -- Water reflection
-  orange     = '#E89B64', -- Sunset Orange
-  yellow     = '#E6C07B', -- Golden Hour
-  pink       = '#D68EAD', -- Desert Rose
-  sand       = '#BDB39B', -- Moonlit Sand
-  brown      = '#A57C68', -- Distant Mesa (use sparingly or for identifiers)
-  teal       = '#7DAEA3', -- Oasis Teal
-  green      = '#90A582', -- Vine Green
-  red        = '#D98686', -- Error Red
-  dark_red   = '#b56d6d',
-  blue       = '#82aaff', -- General purpose blue (can adjust)
-  cyan       = '#89ddff', -- General purpose cyan (can adjust)
-
-  -- UI colors
-  gray = "#7b6d80", -- Muted purple gray
-  comment = "#6d616e", -- Slightly lighter than gray
-  dark_gray = "#403542", -- For subtle UI elements
-  selection = "#4a334d", -- Selection highlight
-  line_highlight = "#2a2130", -- Current line highlight
-  error = "#e05f65", -- Error messages (red)
-  warning = "#f2cc71", -- Warning messages (yellow)
-  info = "#5dc2c0", -- Info messages (cyan)
-  hint = "#7ec191", -- Hints (green)
-}
-
--- M.colors = {
---   -- Core
---   bg         = '#232635', -- Deep Sky Background
---   fg         = '#D5CFC1', -- Sand Foreground
---   fg_dim     = '#A9A396', -- Dimmer FG for less important elements
---   selection  = '#404559', -- Visual Selection Background
---   comment    = '#6B7A8F', -- Dune Shadow
---
---   -- Accents inspired by Alto's Odyssey
---
---   -- Semantic/Status
---
---   -- UI Elements
---   ui_bg      = '#1e212d', -- Slightly darker/different BG for UI floats
---   border     = '#50566e',
---   statusline_bg = '#1e212d',
---   statusline_fg = "#232635",
---   active_bg  = '#313546', -- Active statusline segment, Pmenu selected
---
--- }
+M.colors = require('obsidian')
 
 function M.setup()
   -- Clear previous highlighting
@@ -119,7 +49,7 @@ function M.setup()
 
     StatusLine = { fg = M.colors.fg, bg = M.colors.bg_light },
     StatusLineNC = { fg = M.colors.gray, bg = M.colors.bg_dark },
-    VertSplit = { fg = M.colors.dark_gray },
+    VertSplit = { fg = M.colors.bg_dark , bg = M.colors.bg_dark },
 
     TabLine = { fg = M.colors.gray, bg = M.colors.bg_dark },
     TabLineFill = { bg = M.colors.bg_dark },
@@ -273,21 +203,23 @@ function M.setup()
 
     -- Git
     GitSignsAdd = { fg = M.colors.green },
-    GitSignsChange = { fg = M.colors.blue },
+    GitSignsChange = { fg = M.colors.yellow },
     GitSignsDelete = { fg = M.colors.red },
 
     -- Telescope
-    TelescopeNormal = { fg = M.colors.fg, bg = M.colors.bg_dark },
-    TelescopeBorder = { fg = M.colors.dark_gray, bg = M.colors.bg_dark },
-    TelescopePromptBorder = { fg = M.colors.dark_gray, bg = M.colors.bg_dark },
-    TelescopeResultsBorder = { fg = M.colors.dark_gray, bg = M.colors.bg_dark },
-    TelescopePreviewBorder = { fg = M.colors.dark_gray, bg = M.colors.bg_dark },
+    TelescopeNormal = { fg = M.colors.fg, bg = M.colors.bg_main },
+    TelescopeBorder = { fg = M.colors.dark_gray, bg = M.colors.bg_main },
+    TelescopePromptBorder = { fg = M.colors.dark_gray, bg = M.colors.bg_main },
+    TelescopeResultsBorder = { fg = M.colors.dark_gray, bg = M.colors.bg_main },
+    TelescopePreviewBorder = { fg = M.colors.dark_gray, bg = M.colors.bg_main },
     TelescopeSelection = { fg = M.colors.fg, bg = M.colors.selection },
     TelescopeMultiSelection = { fg = M.colors.yellow, bg = M.colors.selection },
     TelescopeMatching = { fg = M.colors.sand, bold = true },
 
     -- NvimTree
-    NvimTreeNormal = { fg = M.colors.fg, bg = M.colors.bg_dark },
+    NvimTreeNormal = { fg = M.colors.fg, bg = M.colors.bg_main},
+    NvimTreeVertSplit = { fg = M.colors.bg_dark , bg = M.colors.bg_main },
+    NvimTreeVertWinSeperator = { fg = M.colors.bg_main },
     NvimTreeRootFolder = { fg = M.colors.blue, bold = true },
     NvimTreeFolderName = { fg = M.colors.blue },
     NvimTreeFolderIcon = { fg = M.colors.blue },
